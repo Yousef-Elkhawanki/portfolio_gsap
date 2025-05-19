@@ -1,0 +1,29 @@
+@import "tailwindcss";
+:root {
+    --font-sans: "Poppins", sans-serif;
+    --font-antonio: "Antonio", sans-serif;
+    --font-satisfy: "Satisfy", cursive;
+    --dark-color: #111;
+    --dark-secondary-color: #171717;
+    --light-color: #fff;
+    --main-color: #b3de50;
+}
+* {
+    letter-spacing: 2px;
+    line-height: 1.1;
+}
+body {
+    @apply bg-[var(--dark-color)] text-[var(--light-color)];
+    min-height: 300vh;
+}
+
+.font-antonio {
+    font-family: var(--font-antonio);
+}
+.font-satisfy {
+    font-family: var(--font-satisfy);
+}
+.header-blur {
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.5);
+}
