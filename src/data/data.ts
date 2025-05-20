@@ -1,0 +1,113 @@
+export const techData = [
+    {
+        id: 1,
+        title: "HTML",
+        image: "./images/tools/html-5.png",
+    },
+    {
+        id: 2,
+        title: "CSS",
+        image: "./images/tools/css-3.png",
+    },
+    {
+        id: 6,
+        title: "Tailwind",
+        image: "./images/tools/tailwind.svg",
+    },
+    {
+        id: 11,
+        title: "Sass",
+        image: "./images/tools/sass.png",
+    },
+    {
+        id: 3,
+        title: "JavaScript",
+        image: "./images/tools/js.png",
+    },
+    {
+        id: 12,
+        title: "Typescript",
+        image: "./images/tools/typescript.png",
+    },
+    {
+        id: 4,
+        title: "Reactjs",
+        image: "./images/tools/react.png",
+    },
+    {
+        id: 5,
+        title: "Nextjs",
+        image: "./images/tools/next.png",
+    },
+
+    {
+        id: 9,
+        title: "Git",
+        image: "./images/tools/git.png",
+    },
+    {
+        id: 10,
+        title: "Github",
+        image: "./images/tools/github.png",
+    },
+
+    {
+        id: 13,
+        title: "Redux Toolkit",
+        image: "./images/tools/redux.svg",
+    },
+    {
+        id: 14,
+        title: "React Query",
+        image: "./images/tools/react-query.png",
+    },
+    {
+        id: 8,
+        title: "GSAP",
+        image: "./images/tools/gsap.webp",
+    },
+    {
+        id: 7,
+        title: "Figma",
+        image: "./images/tools/figma.png",
+    },
+];
+
+export const workExperience = [
+    {
+        id: 1,
+        title: "Senior frontend developer",
+        company: "health insights asia",
+        date: "2025 - present ",
+    },
+    {
+        id: 2,
+        title: "Frontend developer ",
+        company: "Freelancer",
+        date: "2020 - present ",
+    },
+    {
+        id: 3,
+        title: "Mid frontend developer",
+        company: "beyond creation",
+        date: "2023 - 2025 ",
+    },
+    {
+        id: 5,
+        title: " Instructor",
+        company: "EraaSoft",
+        date: "2023 ",
+    },
+    {
+        id: 6,
+        title: " Instructor",
+        company: "MEC Academy",
+        date: "2023 ",
+    },
+    {
+        id: 4,
+        title: " Instructor",
+        company: "AMIT Learning",
+        date: "2020 ",
+    },
+];

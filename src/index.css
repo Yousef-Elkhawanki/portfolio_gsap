@@ -27,3 +27,6 @@ body {
     backdrop-filter: blur(8px);
     background-color: rgba(0, 0, 0, 0.5);
 }
+.large-line-height {
+    line-height: 1.5;
+}
