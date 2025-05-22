@@ -111,3 +111,34 @@ export const workExperience = [
         date: "2020 ",
     },
 ];
+
+export const projectsData = [
+    {
+        id: 1,
+        title: "Madinet Masr",
+        tools: ["next", "sass", "typescript", "gsap"],
+        image: "./images/project1.png",
+        link: "https://madinetmasr.com/",
+    },
+    {
+        id: 2,
+        title: "walima",
+        tools: ["next", "sass", "js", "Framer Motion"],
+        image: "./images/project2.png",
+        link: "https://walimasocial.com/en",
+    },
+    {
+        id: 3,
+        title: "Sunbulah",
+        tools: ["next", "sass", "js", "Framer Motion"],
+        image: "./images/project3.png",
+        link: "https://sunbulah.com/en",
+    },
+    {
+        id: 4,
+        title: "Hydepark Developments",
+        tools: ["next", "sass", "js", "Framer Motion"],
+        image: "./images/project4.png",
+        link: "https://www.hydeparkdevelopments.com/",
+    },
+];
