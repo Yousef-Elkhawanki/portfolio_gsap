@@ -71,7 +71,7 @@ export default function Provider({ children }: { children: React.ReactNode }) {
                     ref={contentRef}
                     className="smooth-content"
                     style={{
-                        minHeight: "200vh", // مهم جداً المحتوى أطول من الشاشة عشان السكروول يشتغل
+                        minHeight: "300vh", 
                         position: "relative",
                     }}>
                     <Navbar />
