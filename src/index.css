@@ -30,3 +30,10 @@ body {
 .large-line-height {
     line-height: 1.5;
 }
+
+*::-webkit-scrollbar{
+    display: none;
+}
+.animated-text span {
+    transition: color 0.3s ease, opacity 0.3s ease;
+  }
