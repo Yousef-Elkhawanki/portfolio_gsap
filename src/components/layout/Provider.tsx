@@ -8,52 +8,54 @@ import { ScrollSmoother } from "gsap/ScrollSmoother";
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 export default function Provider({ children }: { children: React.ReactNode }) {
-  const wrapperRef = useRef<HTMLDivElement>(null);
-  const contentRef = useRef<HTMLDivElement>(null);
+    const wrapperRef = useRef<HTMLDivElement>(null);
+    const contentRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (!wrapperRef.current || !contentRef.current) return;
+    useEffect(() => {
+        if (!wrapperRef.current || !contentRef.current) return;
 
-    const smoother = ScrollSmoother.create({
-      wrapper: wrapperRef.current,
-      content: contentRef.current,
-      smooth: 8,
-      effects: true,
-    });
+        const smoother = ScrollSmoother.create({
+            wrapper: wrapperRef.current,
+            content: contentRef.current,
+            smooth: 10,
+            effects: true,
+            normalizeScroll: true,
+            ignoreMobileResize: true,
+        });
 
-    const elements = contentRef.current.querySelectorAll<HTMLElement>(".animated-text");
+        const elements = contentRef.current.querySelectorAll<HTMLElement>(".animated-text");
 
-    elements.forEach((el) => {
-      gsap.fromTo(
-        el,
-        {
-          opacity: 0,
-          y: 80,
-          filter: "blur(8px)",
-        },
-        {
-          opacity: 1,
-          y: 0,
-          filter: "blur(0px)",
-          duration: 1,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: el,
-            scroller: wrapperRef.current,
-            scrub: 0.5,
-            start: "top 80%",
-            end: "bottom 50%",
-            toggleActions: "play reverse play reverse",
-          },
-        }
-      );
-    });
+        elements.forEach((el) => {
+            gsap.fromTo(
+                el,
+                {
+                    opacity: 0,
+                    y: 80,
+                    filter: "blur(8px)",
+                },
+                {
+                    opacity: 1,
+                    y: 0,
+                    filter: "blur(0px)",
+                    duration: 1,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        scroller: wrapperRef.current,
+                        scrub: 0.5,
+                        start: "top 80%",
+                        end: "bottom 50%",
+                        toggleActions: "play reverse play reverse",
+                    },
+                },
+            );
+        });
 
-    return () => {
-      smoother.kill();
-      ScrollTrigger.getAll().forEach((st) => st.kill());
-    };
-  }, []);
+        return () => {
+            smoother.kill();
+            ScrollTrigger.getAll().forEach((st) => st.kill());
+        };
+    }, []);
 
     return (
         <>
