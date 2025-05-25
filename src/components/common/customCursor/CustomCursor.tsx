@@ -95,7 +95,7 @@ export default function CustomCursor() {
                 rounded-full pointer-events-none transition-all duration-150 ease-out`}>
             {hoveringImage && (
                 <span className=" font-antonio text-center uppercase text-balance">
-                    View <br /> product
+                    View <br /> 
                 </span>
             )}
             {hoveringVideo && <span className=" font-antonio text-center uppercase">Play</span>}

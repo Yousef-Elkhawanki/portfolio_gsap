@@ -17,7 +17,7 @@ export default function Provider({ children }: { children: React.ReactNode }) {
         const smoother = ScrollSmoother.create({
             wrapper: wrapperRef.current,
             content: contentRef.current,
-            smooth: 10,
+            smooth: 4,
             effects: true,
             normalizeScroll: true,
             ignoreMobileResize: true,
@@ -30,7 +30,7 @@ export default function Provider({ children }: { children: React.ReactNode }) {
                 el,
                 {
                     opacity: 0,
-                    y: 80,
+                    y: 90,
                     filter: "blur(8px)",
                 },
                 {
@@ -60,6 +60,7 @@ export default function Provider({ children }: { children: React.ReactNode }) {
     return (
         <>
             <CustomCursor />
+            <Navbar />
             <div
                 ref={wrapperRef}
                 style={{
@@ -71,12 +72,11 @@ export default function Provider({ children }: { children: React.ReactNode }) {
                     ref={contentRef}
                     className="smooth-content"
                     style={{
-                        minHeight: "300vh", 
+                        minHeight: "645vh",
                         position: "relative",
                     }}>
-                    <Navbar />
                     {children}
-                    <div className="py-14"></div>
+                    {/* <div className="py-14"></div> */}
                 </div>
             </div>
         </>
