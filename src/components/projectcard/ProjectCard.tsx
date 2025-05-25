@@ -8,7 +8,7 @@ export default function ProjectCard({ project }: any) {
                 <h3 className="text-2xl font-antonio capitalize mb-4">{project.title}</h3>
                 <div className="flex items-center justify-start gap-2 flex-wrap">
                     {project.tools.map((tool: any, index: number) => (
-                        <span className="bg-[var(--dark-secondary-color)] px-4 py-2 rounded-full  text-[10px] capitalize header-blur" key={index}>{tool}</span>
+                        <span className="bg-[var(--dark-secondary-color)] px-4 py-2 rounded-full  text-[10px] capitalize header-blur pointer-events-none" key={index}>{tool}</span>
                     ))}
                 </div>
             </div>
