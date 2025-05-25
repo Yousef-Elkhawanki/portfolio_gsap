@@ -91,7 +91,7 @@ export default function CustomCursor() {
                 text-sm
                 shadow-2xl
                 bg-white
-                ${hoveringImage || hoveringVideo || hoveringSwiper ? "w-26 h-26  text-black" : " w-2 h-2"} 
+                ${hoveringImage || hoveringVideo || hoveringSwiper ? "w-20 h-20  text-black" : " w-2 h-2"} 
                 rounded-full pointer-events-none transition-all duration-150 ease-out`}>
             {hoveringImage && (
                 <span className=" font-antonio text-center uppercase text-balance">
