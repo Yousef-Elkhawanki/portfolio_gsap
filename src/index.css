@@ -28,7 +28,8 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
 }
 .large-line-height {
-    line-height: 1.5;
+    line-height: 2;
+    font-weight: 300;
 }
 
 *::-webkit-scrollbar{
