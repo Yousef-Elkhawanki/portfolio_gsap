@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import Navbar from "./Navbar";
 import CustomCursor from "../common/customCursor/CustomCursor";
 import { gsap } from "gsap";
@@ -11,51 +11,53 @@ export default function Provider({ children }: { children: React.ReactNode }) {
     const wrapperRef = useRef<HTMLDivElement>(null);
     const contentRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-        if (!wrapperRef.current || !contentRef.current) return;
+ useLayoutEffect(() => {
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-        const smoother = ScrollSmoother.create({
-            wrapper: wrapperRef.current,
-            content: contentRef.current,
-            smooth: 4,
-            effects: true,
-            normalizeScroll: true,
-            ignoreMobileResize: true,
-        });
+  if (!wrapperRef.current || !contentRef.current) return;
 
-        const elements = contentRef.current.querySelectorAll<HTMLElement>(".animated-text");
+  const smoother = ScrollSmoother.create({
+    wrapper: wrapperRef.current,
+    content: contentRef.current,
+    smooth: 1,
+    effects: true,
+    normalizeScroll: true,
+    ignoreMobileResize: true,
+  });
 
-        elements.forEach((el) => {
-            gsap.fromTo(
-                el,
-                {
-                    opacity: 0,
-                    y: 90,
-                    filter: "blur(8px)",
-                },
-                {
-                    opacity: 1,
-                    y: 0,
-                    filter: "blur(0px)",
-                    duration: 1,
-                    ease: "power3.out",
-                    scrollTrigger: {
-                        trigger: el,
-                        scroller: wrapperRef.current,
-                        scrub: 0.5,
-                        start: "top 80%",
-                        end: "bottom 50%",
-                        toggleActions: "play reverse play reverse",
-                    },
-                },
-            );
-        });
+  const ctx = gsap.context(() => {
+    gsap.utils.toArray<HTMLElement>(".animated-text").forEach((el) => {
+      gsap.fromTo(
+        el,
+        { opacity: 0, y: 90, filter: "blur(8px)" },
+        {
+          opacity: 1,
+          y: 0,
+          filter: "blur(0px)",
+          duration: 1.5,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+            end: "bottom bottom",
+            toggleActions: "play none none none",
+            once: true,
+          },
+        },
+      );
+    });
 
-        return () => {
-            smoother.kill();
-            ScrollTrigger.getAll().forEach((st) => st.kill());
-        };
-    }, []);
+    ScrollTrigger.refresh();
+  }, contentRef);
+
+  return () => {
+    ctx.revert(); 
+    smoother.kill();
+  };
+}, []);
+
+
+
 
     return (
         <>
@@ -72,7 +74,6 @@ export default function Provider({ children }: { children: React.ReactNode }) {
                     ref={contentRef}
                     className="smooth-content"
                     style={{
-                        minHeight: "645vh",
                         position: "relative",
                     }}>
                     {children}
