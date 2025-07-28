@@ -1,5 +1,5 @@
 @import "tailwindcss";
-:root {
+/* :root {
     --font-sans: "Poppins", sans-serif;
     --font-antonio: "Antonio", sans-serif;
     --font-satisfy: "Satisfy", cursive;
@@ -7,14 +7,23 @@
     --dark-secondary-color: #171717;
     --light-color: #fff;
     --main-color: #b3de50;
+} */
+@theme {
+    --font-sans: "Poppins", sans-serif;
+    --font-antonio: "Antonio", sans-serif;
+    --font-satisfy: "Satisfy", cursive;
+    --color-dark: #111;
+    --dark-secondary-color: #171717;
+    --color-light: #fff;
+    --main-color: #b3de50;
 }
 * {
     letter-spacing: 2px;
     line-height: 1.1;
 }
 body {
-    @apply bg-[var(--dark-color)] text-[var(--light-color)];
-    min-height: 300vh;
+    @apply bg-dark text-light;
+    /* min-height: 300vh; */
 }
 
 .font-antonio {
@@ -32,9 +41,20 @@ body {
     font-weight: 300;
 }
 
-*::-webkit-scrollbar{
+*::-webkit-scrollbar {
     display: none;
 }
 .animated-text span {
     transition: color 0.3s ease, opacity 0.3s ease;
-  }
+}
+.fill-text {
+    letter-spacing: normal;
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+.fill-text span {
+    display: inline-block;
+    white-space: pre;
+    line-height: 1;
+}

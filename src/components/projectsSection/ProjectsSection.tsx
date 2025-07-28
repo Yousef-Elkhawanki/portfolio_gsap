@@ -5,7 +5,7 @@ import ProductCard from "../projectcard/ProjectCard";
 export default function ProjectsSection() {
     return (
         <section className="projects-section">
-            <div className="container py-30 xl:w-[80%] w-[90%] mx-auto">
+            <div className="container xl:pt-30 lg:pt-20 pt-16 xl:w-[80%] w-[90%] mx-auto">
                 <HeaderSection title="Take a look at our projects" subtitle="projects" customClass="xl:w-1/2" />
                 <div className="projects-section-container grid xl:grid-cols-2 grid-cols-1 gap-10 mt-16">
                     {projectsData.map((project) => (

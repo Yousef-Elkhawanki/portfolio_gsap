@@ -5,8 +5,9 @@ interface IWrapperBtn {
     title: string;
     icon?: React.ReactNode;
     isDownload?: boolean;
+    customClass?: string;
 }
-export default function WrapperBtn({ title, icon, isDownload }: IWrapperBtn) {
+export default function WrapperBtn({ title, icon, isDownload ,customClass}: IWrapperBtn) {
     const handleClick = () => {
         if (isDownload) {
             const link = document.createElement("a");
@@ -25,6 +26,7 @@ export default function WrapperBtn({ title, icon, isDownload }: IWrapperBtn) {
                 {
                     "cursor-pointer hover:bg-[var(--main-color)] duration-300": isDownload,
                 },
+                customClass
             )}>
             <span>{title}</span>
             <span>{icon}</span>
