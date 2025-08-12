@@ -11,7 +11,7 @@ export default function WrapperBtn({ title, icon, isDownload ,customClass}: IWra
     const handleClick = () => {
         if (isDownload) {
             const link = document.createElement("a");
-            link.href = "/yousef-elkhawanki-cv.pdf";
+            link.href = "./yousef-elkhawanki-cv.pdf";
             link.download = "yousef-elkhawanki-cv.pdf";
             link.click();
         } else {

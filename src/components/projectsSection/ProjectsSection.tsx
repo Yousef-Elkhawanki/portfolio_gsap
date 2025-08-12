@@ -7,7 +7,7 @@ export default function ProjectsSection() {
         <section className="projects-section">
             <div className="container xl:pt-30 lg:pt-20 pt-16 xl:w-[80%] w-[90%] mx-auto">
                 <HeaderSection title="Take a look at our projects" subtitle="projects" customClass="xl:w-1/2" />
-                <div className="projects-section-container grid xl:grid-cols-2 grid-cols-1 gap-10 mt-16">
+                <div className="projects-section-container grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-10 mt-16">
                     {projectsData.map((project) => (
                         <ProductCard project={project} key={project.id} />
                     ))}

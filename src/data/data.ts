@@ -10,32 +10,32 @@ export const techData = [
         image: "./images/tools/css-3.png",
     },
     {
-        id: 6,
+        id: 3,
         title: "Tailwind",
         image: "./images/tools/tailwind.svg",
     },
     {
-        id: 11,
+        id: 4,
         title: "Sass",
         image: "./images/tools/sass.png",
     },
     {
-        id: 3,
+        id: 5,
         title: "JavaScript",
         image: "./images/tools/js.png",
     },
     {
-        id: 12,
+        id: 6,
         title: "Typescript",
         image: "./images/tools/typescript.png",
     },
     {
-        id: 4,
+        id: 7,
         title: "Reactjs",
         image: "./images/tools/react.png",
     },
     {
-        id: 5,
+        id: 8,
         title: "Nextjs",
         image: "./images/tools/next.png",
     },
@@ -52,24 +52,44 @@ export const techData = [
     },
 
     {
-        id: 13,
+        id: 11,
         title: "Redux Toolkit",
         image: "./images/tools/redux.svg",
     },
     {
-        id: 14,
+        id: 12,
         title: "React Query",
         image: "./images/tools/react-query.png",
     },
     {
-        id: 8,
+        id: 13,
         title: "GSAP",
         image: "./images/tools/gsap.webp",
     },
     {
-        id: 7,
+        id: 14,
         title: "Figma",
         image: "./images/tools/figma.png",
+    },
+    {
+        id: 15,
+        title: "Nodejs",
+        image: "./images/tools/node-js.png",
+    },
+    {
+        id: 16,
+        title: "Expressjs",
+        image: "./images/tools/express.png",
+    },
+    {
+        id: 17,
+        title: "MongoDB",
+        image: "./images/tools/mongo.svg",
+    },
+    {
+        id: 18,
+        title: "Nestjs",
+        image: "./images/tools/nestjs.svg",
     },
 ];
 
@@ -82,7 +102,7 @@ export const workExperience = [
     },
     {
         id: 2,
-        title: "Frontend developer ",
+        title: "Software developer",
         company: "Freelancer",
         date: "2020 - present ",
     },
@@ -113,6 +133,20 @@ export const workExperience = [
 ];
 
 export const projectsData = [
+    {
+        id: 6,
+        title: "Tashkeel",
+        tools: ["nextjs", "Zustand", "typescript", "gsap"],
+        image: "./images/project6.png",
+        link: null,
+    },
+    {
+        id: 5,
+        title: "Napolia",
+        tools: ["nextjs", "Zustand", "typescript", "gsap"],
+        image: "./images/project5.png",
+        link: null,
+    },
     {
         id: 1,
         title: "Madinet Masr",
