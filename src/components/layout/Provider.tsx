@@ -39,7 +39,7 @@ export default function Provider({ children }: { children: React.ReactNode }) {
                         scrollTrigger: {
                             trigger: el,
                             start: "top 85%",
-                            end: "bottom bottom",
+                            // end: "bottom bottom",
                             toggleActions: "play none none none",
                             once: true,
                         },
@@ -58,7 +58,7 @@ export default function Provider({ children }: { children: React.ReactNode }) {
                         scrollTrigger: {
                             trigger: el,
                             start: "top 85%",
-                            end: "bottom bottom",
+                            // end: "bottom bottom",
                             toggleActions: "play none none none",
                             once: true,
                         },
@@ -89,7 +89,7 @@ export default function Provider({ children }: { children: React.ReactNode }) {
                             scrollTrigger: {
                                 trigger: el,
                                 start: "top 85%",
-                              end: "bottom bottom",
+                            //   end: "bottom bottom",
                                 scrub: 10,
                                 toggleActions: "play ",
                             },

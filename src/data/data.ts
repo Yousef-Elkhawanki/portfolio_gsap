@@ -102,7 +102,7 @@ export const workExperience = [
     },
     {
         id: 2,
-        title: "Software developer",
+        title: "Frontend developer",
         company: "Freelancer",
         date: "2020 - present ",
     },
@@ -114,7 +114,7 @@ export const workExperience = [
     },
     {
         id: 5,
-        title: " Instructor",
+        title: "Frontend developer & Instructor",
         company: "EraaSoft",
         date: "2023 ",
     },
@@ -126,13 +126,20 @@ export const workExperience = [
     },
     {
         id: 4,
-        title: " Instructor",
+        title: "Frontend developer & Instructor",
         company: "AMIT Learning",
         date: "2020 ",
     },
 ];
 
 export const projectsData = [
+    {
+        id: 7,
+        title: "Waheej",
+        tools: ["nextjs", "Zustand", "typescript", "gsap"],
+        image: "./images/project7.png",
+        link: null,
+    },
     {
         id: 6,
         title: "Tashkeel",
