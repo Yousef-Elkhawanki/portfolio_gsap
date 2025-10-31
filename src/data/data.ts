@@ -145,7 +145,7 @@ export const projectsData = [
         title: "Tashkeel",
         tools: ["nextjs", "Zustand", "typescript", "gsap"],
         image: "./images/project6.png",
-        link: null,
+        link: "https://tashkeel-toolkit.vercel.app/",
     },
     {
         id: 5,
